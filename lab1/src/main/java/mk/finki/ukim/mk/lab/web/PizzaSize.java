@@ -1,5 +1,6 @@
 package mk.finki.ukim.mk.lab.web;
 
+import mk.finki.ukim.mk.lab.model.Order;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.thymeleaf.context.WebContext;
@@ -53,10 +54,8 @@ public class PizzaSize extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session = req.getSession();
         String size = req.getParameter("pizza_size");
-        session.setAttribute("size", size);
-        session.setAttribute("pizza", session.getAttribute("pizza"));
+        req.getSession().setAttribute("size", size);
         resp.sendRedirect("/PizzaOrder.do");
     }
 }

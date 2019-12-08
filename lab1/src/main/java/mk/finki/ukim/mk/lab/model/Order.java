@@ -10,9 +10,13 @@ public class Order {
     protected Long orderId;
 
     public Order() {
+        this.pizzaType = null;
+        this.clientName = null;
+        this.clientAddress = null;
+        this.orderId = null;
     }
 
-    public Order(String pizzaType, String clientName, String clientAddress, Long orderId) {
+    public Order(String pizzaTyp, String clientName, String clientAddress, Long orderId) {
         this.pizzaType = pizzaType;
         this.clientName = clientName;
         this.clientAddress = clientAddress;
