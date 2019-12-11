@@ -9,4 +9,8 @@ public interface PizzaService {
 
     List<Pizza> listAllPizzas();
 
+    void DeleteByName(String name);
+
+    Optional<Pizza> FindByName(String name);
+
 }
